@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#151515">
+
+    <RelativeLayout
+        android:id="@+id/tool"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#090909">
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="EMI Calculator"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tool"
+        android:layout_marginStart="15dp"
+        android:background="#090909"
+        android:backgroundTint="#090909"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="15dp"
+        app:cardCornerRadius="20dp"
+        app:cardMaxElevation="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/border_stroke_bg">
+
+                <EditText
+                    android:id="@+id/principal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:digits="0123456789."
+                    android:hint="Principal Amount"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/text_color" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border_stroke_bg">
+
+                <EditText
+                    android:id="@+id/interest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:digits="0123456789."
+                    android:fontFamily="@font/poppins_medium"
+                    android:hint="@string/hint_interest"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:textColorHint="#B5B5B5"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border_stroke_bg">
+
+                <EditText
+                    android:id="@+id/years"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:digits="0123456789."
+                    android:hint="@string/hint_years"
+                    android:inputType="number"
+                    android:textColorHint="@color/text_color"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+
+
+            <LinearLayout
+                android:layout_marginTop="30dp"
+                android:id="@+id/btn_calculate2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:background="@drawable/btn_bg">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:text="CALCULATE"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textSize="20sp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cardData"
+        android:layout_margin="15dp"
+        android:background="#090909"
+        android:backgroundTint="#090909"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        app:cardCornerRadius="20dp"
+        app:cardMaxElevation="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:id="@+id/TextView01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Results:"
+                android:textColor="#43C1F9"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/border_stroke_bg">
+
+                <EditText
+                    android:id="@+id/emi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:hint="@string/hint_emi"
+                    android:inputType="number"
+                    android:textColorHint="@color/text_color"
+                    android:maxEms="0"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border_stroke_bg">
+
+                <EditText
+                    android:id="@+id/interest_total"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:hint="@string/hint_interest_total"
+                    android:inputType="number"
+                    android:textColorHint="@color/text_color"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:id="@+id/bannerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:id="@+id/nativeFrameStd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal" />
+    </RelativeLayout>
+</RelativeLayout>
